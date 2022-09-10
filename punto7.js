@@ -6,9 +6,11 @@ número 10; es decir todos los planos falsos tienen números de serie
 consecutivos comenzando desde el #11. SOLO si se obtiene un plano
 verdadero Chewbacca y Han pueden abordar su nave y ejecutar un
 mensajeen consola avisando que han despegado
-Configure la rutina necesaria para despegar la nave utilizando callbacks*/
+Configure la rutina necesaria para despegar la nave utilizando callbacks
+*******************************************************************************/
 
-function filtratPlanos(planos, arrancarNave){
+//funcion tradicional
+/*function filtratPlanos(planos, arrancarNave){
 
     let filtro=
     planos.filter(function(plano){
@@ -17,12 +19,29 @@ function filtratPlanos(planos, arrancarNave){
 
     arrancarNave(filtro)
 }
-let planos= [1,100,200,300,400,500]
+let planos= [1,500,1000]
 filtratPlanos(planos,function(filtro){
     let cuenta=filtro.length
     if(cuenta>0){
         console.log("Arrancando la nave")
     }else{
+        console.log("Nos quedamos")
+    }
+})*/
+
+
+//funcion flecha
+let filtratPlanos = (planos, arrancarnave) => {
+    let filtro = planos.filter((plano) => plano >= 1 && plano <= 10)
+    arrancarnave(filtro)
+}
+
+let planos = [1, 500, 1000]
+filtratPlanos(planos, (filtro) => {
+    let cuenta = filtro.length
+    if (cuenta > 0) {
+        console.log("Arrancando Nave");
+    } else {
         console.log("Nos quedamos")
     }
 })

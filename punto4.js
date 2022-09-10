@@ -3,5 +3,17 @@ de luz y contabilizar la cantidad de energía de sables que tienen
 negativa en Joules.
 
 Ejemplo: para la entrada {2,4,-8,5,-6} la cantidad de sables
-defectuosos con energía negativa fue de 2 sables.*/
+defectuosos con energía negativa fue de 2 sables.
+*******************************************************************************/
 
+//FUNCION TRADICIONAL
+let numeros=[0,-1,-2,1,10,20]
+
+function sableN (){
+     let filtro=numeros.filter(function(negativo){
+          return negativo<0
+     })
+return filtro
+}
+
+console.log(sableN())

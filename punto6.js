@@ -6,11 +6,10 @@ Inicialmente, se debe programar una función que asocie los datos de:
 {nombre, planeta, edad y estatura} de 1 Padawan a un objeto y una vez
 este objeto sea creado se debe llamar a una función secundaria que
 clasifique y muestre en consola la actividad asignada al Padawan
-*/
+*******************************************************************************/
 
-
-//Declarando la funcion
-function crearAprendiz(nombre,planeta,edad,estatura,clasificarAprendiz){
+//Declarando la funcion tradicional
+/*function crearAprendiz(nombre,planeta,edad,estatura,clasificarAprendiz){
     let datosAprendiz={
         nombre: nombre,
         planeta: planeta,
@@ -27,7 +26,25 @@ crearAprendiz('Angie','Saturno', 23, 1.63,function(aprendiz){
     }else{
         console.log("Usted se va para la clase de fuerza")
     }
-    
-})
+})*/
+
 
 //funcion con flechas
+let crearAprendiz = (nombre, planeta, edad, estatura, clasificarAprendiz)=>{
+    let datosAprendiz = {
+        nombre: nombre,
+        planeta: planeta,
+        edad: edad,
+        estatura: estatura,
+    }
+    clasificarAprendiz(datosAprendiz)
+}
+
+
+crearAprendiz ("Angie", "Saturno", 23, 1.63, (aprendiz) => {
+    if (aprendiz.edad >= 15) {
+        console.log("Usted se va para la clase de sable de la luz")
+    } else {
+        console.log("Usted se va para la clase de fuerza")
+    }
+})

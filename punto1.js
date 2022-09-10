@@ -3,10 +3,11 @@ Padawan a calcular la distancia a la que cualquiera de los planetas de la
 ruta N-14 pertenecientes a la ruta comercial de la federación
 intergaláctica, se encuentra del planeta NABOO.
 Para calcular dicha distancia se debe:
-• Recibir las coordenadas X,Y del planeta en UA*/
+• Recibir las coordenadas X,Y del planeta en UA
 
 
-//Declarando una función que calcule la distancia entre 2 puntos.
+
+//FUNCION TRADICIONAL
 
 /*function calcularDistancia(x1,y1,x2,y2){
     return (Math.sqrt(Math.pow(x2-x1,2) + Math.pow(y2-y1,2)))
@@ -16,7 +17,7 @@ Para calcular dicha distancia se debe:
 let calcularDistancia=(0,0,12,0)*/
 
 
-//funcion con flechas
+//FUNCION CON FLECHA
 let calcularDistancia=(x1,y1,x2,y2)=> Math.sqrt(Math.pow(x2-x1,2)+ Math.pow(y2-y1,2))
 
 let distancia = calcularDistancia(0,1,15,0);

@@ -6,7 +6,9 @@ piloto asignado a cada nave.
 Tenga en cuenta que el formato de todos los datos es el siguiente:
 • ARQ2555: Sara Bel-Sun
 • ARQ2556: Nodin Chavdri
-• ARQ2557: Finn*/
+• ARQ2557: Finn
+*******************************************************************************/
+
 
 let codigonaves=[
     "ARQ2555: Sara Bel-Sun",
@@ -14,9 +16,11 @@ let codigonaves=[
     "ARQ2557: Finn"
 ]
 
-codigonaves.forEach(function(codigonave){
+//FUNCION TRADICIONAL
+/*codigonaves.forEach(function(codigonave){
     console.log(codigonave.split(":")[1])
-})
+})*/
+
 
 //FUNCION FLECHA
 codigonaves.forEach((codigonave)=>console.log(codigonave.split(":")[1]))
